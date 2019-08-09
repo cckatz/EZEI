@@ -1,21 +1,35 @@
-import React from 'react';
-import { StyleSheet, ScrollView, Text, View } from 'react-native';
-import { Button } from 'react-native-elements';
+import React, {Component} from 'react';
+import { StyleSheet, ScrollView, Text, Button, View } from 'react-native';
+// import { Button } from 'react-native-elements';
 import Collection from '../components/Collection';
 
-export default function ActivitiesList(props) {
+export default class ActivitiesList extends Component {
 
-      const { navigation } = props;
-      const skill = navigation.getParam("skill")
+ static navigationOptions = ({navigation}) => {
+  console.log(navigation.getParam("skill").title)
+  return(
+      {
+        title: `${navigation.getParam("skill").title} Skills`,
+        headerRight: <Button onPress={() => alert('This is a button!')} title="+" color="#000"
+      />
 
-      const dailyActivities =  skill.dailyActivities;
-      const games = skill.games;
-  
+      } 
+    )
+  }
+
+     
       renderCollections = () => {
+            const { navigation } = this.props;
+            const skill = navigation.getParam("skill")
+
+            const dailyActivities =  skill.dailyActivities;
+            const games = skill.games;
+            const itemTitle = skill.title
+  
              return (
                 <View>
-                <Collection title="Daily Activities" items={dailyActivities} id={0} key={0} navigate={props.navigation.navigate}/>
-                <Collection title="Games" items={games} id={1} key={1} navigate={props.navigation.navigate} />
+                <Collection title="Daily Activities" items={dailyActivities} itemsTitle={itemTitle} id={0} key={0} navigate={this.props.navigation.navigate}/>
+                <Collection title="Games" items={games} id={1} key={1} itemsTitle={itemTitle} navigate={this.props.navigation.navigate} />
                 </View>
             )
       }
@@ -40,14 +54,15 @@ export default function ActivitiesList(props) {
 
   //   </View>
   // );
-  return (
-             <View style={styles.container}>
-             <Text style={styles.headlineText}>Activities List</Text>
-                <ScrollView>
-                    {this.renderCollections()}
-                </ScrollView>
-             </View>
-  )
+    render(){
+    return (
+               <View style={styles.container}>
+                  <ScrollView>
+                      {this.renderCollections()}
+                  </ScrollView>
+               </View>
+    )
+  }
 }
 
 const styles = StyleSheet.create({

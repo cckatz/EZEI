@@ -25,11 +25,11 @@ export default (props) => {
     const navigate = props.navigate;
     return (
         <View style={styles.container}>
-            {/* <TouchableOpacity onPress={() => navigate(props.route)}> */}
-            <View style={[styles.album, props.circle ? {borderRadius: (Dimensions.get('window').width * 4.2/10)/2} : {}]} />
+            <TouchableOpacity onPress={() => navigate('ActivityDetail', {title:props.title, data: props.data})}>
+            <Image source={props.source} style={[styles.album, props.circle ? {borderRadius: (Dimensions.get('window').width * 4.2/10)/2} : {}]} />
             <Text style={styles.text}>{props.title}</Text>
             {/* {renderDescriptionLabel(props)} */}
-            {/* </TouchableOpacity> */}
+            </TouchableOpacity>
         </View>
     )
 }

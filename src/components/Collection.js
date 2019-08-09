@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import CollectionItem from './CollectionItem';
+import ezeiDefault from '../../assets/EasyEI.jpeg'
 
 export default class Collection extends Component {
 
@@ -16,7 +17,7 @@ export default class Collection extends Component {
         const {circle} = this.props;
         return this.props.items.map((a, i ) => {
             return (
-                <CollectionItem circle={circle} source={a.source} title={a.title} collection={this.props.id} route={a.route} navigate={navigate} id={i} key={i}/>
+                <CollectionItem circle={circle} source={ezeiDefault} title={a.title} data={a} collection={this.props.id} route={a.route} navigate={navigate} id={i} key={i}/>
             )
         })
 

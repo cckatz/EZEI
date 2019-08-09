@@ -17,7 +17,6 @@ export default function SkillDetail(props) {
       </Text>
       <View style={{ marginTop: 10, justifyContent: 'center'}}>
         <Button title="Activities" buttonStyle={styles.buttonStyle} titleStyle={{ fontSize: 25}} containerStyle={styles.buttonContainer} onPress={() => props.navigation.navigate('Activities', {skill: skill})}/>
-        <Button title="Share" buttonStyle={styles.buttonStyle} titleStyle={{ fontSize: 25}} containerStyle={styles.buttonContainer}/>
         <Button title="Resources" buttonStyle={styles.buttonStyle} titleStyle={{ fontSize: 25}} containerStyle={styles.buttonContainer}/>
       </View>
     </View>
