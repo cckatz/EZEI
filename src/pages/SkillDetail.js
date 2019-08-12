@@ -6,7 +6,7 @@ export default function SkillDetail(props) {
   const { navigation } = props;
   const skill = navigation.getParam("skill")
 
-  console.log(skill)
+  // console.log(skill)
 
   return (
     <View style={styles.container}>

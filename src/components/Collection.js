@@ -14,6 +14,7 @@ export default class Collection extends Component {
 
 
     renderItems(navigate) {
+        console.log("rendering items")
         const {circle} = this.props;
         return this.props.items.map((a, i ) => {
             return (

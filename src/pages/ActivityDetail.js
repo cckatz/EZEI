@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { StyleSheet, ScrollView, Button, Text, View } from 'react-native';
 import Accordion from 'react-native-collapsible/Accordion';
- 
+import Dialog from 'react-native-dialog';
+import { FloatingAction } from "react-native-floating-action";
+
 const SECTIONS = [
   {
     title: 'First',
@@ -137,6 +139,23 @@ const styles = StyleSheet.create({
 
 export default class ActivityDetail extends Component {
 
+  constructor(props){
+    super(props)
+
+        const { navigation } = this.props;
+        const activity = navigation.getParam("data")
+
+        const ourSections = activity.byAge.map((activityObject)=>{
+          return {
+            title: activityObject.age,
+            content: [...activityObject.data]
+          }
+        })
+
+        this.state = {sections: ourSections}
+
+  }
+
  static navigationOptions = ({navigation}) => {
  	console.log(navigation)
  	return(
@@ -145,8 +164,34 @@ export default class ActivityDetail extends Component {
     	})
 }
 
+      saveNewEIResource = async () => {
+        /* {
+        "title": "Reading a book",
+        "byAge": [
+          { "age":"0-8 months", "data": [{
+            "goal": "Initiating and maintaining eye contact",
+            "instructions": "Hold the child closely or place in an infant seat and read short books, pausing now and then to see if the child looks at you."
+          }]}, */
+        console.log(this.state.goalName)
+        await this.setState({sections: [...this.state.sections, {title: this.state.ageGroup, content:[{goal: this.state.goalName, instructions: this.state.goalObjective}]}], visible: false})
+        // console.log(this.state.activities)
+      }
+
+
 
 	render(){
+
+
+
+      const actions = [
+      {
+        text: "Add a new Goal",
+        icon: require("../../assets/maternity.png"),
+        name: "Activity",
+        color: "#b6c1ff",
+        position: 1
+      },
+    ];
 
 		const { navigation } = this.props;
       	const activity = navigation.getParam("data")
@@ -168,10 +213,37 @@ export default class ActivityDetail extends Component {
 		 	}
 		 })
 	  return (
+      <View>
 	  		<ScrollView style={{backgroundColor: '#ffb6c1'}}>
-	    	<AccordionView data={ourSections}/>
-	    	</ScrollView>
+	    	<AccordionView data={this.state.sections}/>
+        <Dialog.Container visible={this.state.visible}>
+                    <Dialog.Title>{`Add some new goals and objectives by age!`}</Dialog.Title>
+                    <Dialog.Description>
+                      {`What age group does this goal serve?`}
+                    </Dialog.Description>
+                    <Dialog.Input label={`Age Group`} onChangeText={(ageGroup) => this.setState({ageGroup})}/>
+                    <Dialog.Description>
+                      {`What is the goal?`}
+                    </Dialog.Description>
+                    <Dialog.Input label={`Goal`} onChangeText={(goalName) => this.setState({goalName})}/>
+                    <Dialog.Description>
+                      {`What are the objectives and directions?`}
+                    </Dialog.Description>
+                    <Dialog.Input label={`Objective`} onChangeText={(goalObjective) => this.setState({goalObjective})}/>
+                    <Dialog.Button label="Save" onPress={()=>{this.saveNewEIResource()}}/>
+                    <Dialog.Button label="Cancel" onPress={()=>{this.setState({visible: false, activityName: ''})}}/>
+                  </Dialog.Container>
 
+	    	</ScrollView>
+         <FloatingAction
+                    color = "#b6c1ff"
+                    actions={actions}
+                    onPressItem={name => {
+                      console.log(`selected button: ${name}`);
+                      this.setState({ visible: true, name })
+                    }}
+                  />
+      </View>
 	  );
 	}
 }
