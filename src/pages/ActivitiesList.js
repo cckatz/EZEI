@@ -5,9 +5,12 @@ import Collection from '../components/Collection';
 import Dialog from 'react-native-dialog';
 import { FloatingAction } from "react-native-floating-action";
 import { Ionicons } from '@expo/vector-icons';
+import { connect } from 'react-redux';
+import { activityCreate, activitiesFetch } from '../actions/';
 
 
-export default class ActivitiesList extends Component {
+
+class ActivitiesList extends Component {
 
 constructor(props){
   super(props);
@@ -19,10 +22,15 @@ constructor(props){
   const games = skill.games;
   const itemTitle = skill.title
 
-  this.state = {itemTitle: itemTitle, visible: false, activities: [...dailyActivities], games: [...games], activityName: '', gameName: '' }
+  // let activities = skill.list.map((skill)=>{
+  //   return skill 
+  // })
+  // console.log(activities)
+  this.state = {id: skill.id, itemTitle: itemTitle, visible: false, activities:dailyActivities, games: [], activityName: '', gameName: '' }
 
   // this._retrieveData()
-
+  console.log('in constuctor')
+  props.activitiesFetch()
 }
 
 
@@ -36,12 +44,11 @@ constructor(props){
       } 
     )
   }
-
-    // componentWillMount = async () => {
-    //   console.log("in cwm")
-    //     var savedActivities = [];
-    //     savedActivities = await this._retrieveData()      
-    // }
+      componentDidUpdate = (prevProps, prevState) => {
+        console.log('ACTIVITIES LIST component did update')
+        // console.log(this.state, this.props)
+        console.log(this.props.activityList[0].list.length)
+      }
 
       _storeData = async () => {
         try {
@@ -74,16 +81,19 @@ constructor(props){
       }
 
       saveNewEIResource = async () => {
-        /* {
-        "title": "Reading a book",
-        "byAge": [
-          { "age":"0-8 months", "data": [{
-            "goal": "Initiating and maintaining eye contact",
-            "instructions": "Hold the child closely or place in an infant seat and read short books, pausing now and then to see if the child looks at you."
-          }]}, */
+
+        if(this.state.name == "Activity"){
+
         console.log(this.state.activityName)
+        var name = this.state.activityName
         await this.setState({activities: [...this.state.activities, {title: this.state.activityName, byAge:[]}], visible: false})
         await this._storeData()
+      }
+      else{
+        await this.setState({games: [...this.state.games, {title: this.state.activityName, byAge:[]}], visible: false})
+        await this._storeData()
+      }
+        // this.props.activityCreate(this.state.activityName, "daily activity", this.state.id)
         // console.log(this.state.activities)
       }
 
@@ -99,8 +109,8 @@ constructor(props){
   
              return (
                 <View>
-                <Collection title="Daily Activities" items={this.state.activities} itemsTitle={itemTitle} id={0} key={0} navigate={this.props.navigation.navigate}/>
-                <Collection title="Games" items={this.state.games} id={1} key={1} itemsTitle={itemTitle} navigate={this.props.navigation.navigate} />
+                <Collection title="Daily Activities" items={this.state.activities} itemsTitle={itemTitle} id={this.state.id} key={0} navigate={this.props.navigation.navigate}/>
+                <Collection title="Games" items={this.state.games} id={this.state.id} key={1} itemsTitle={itemTitle} navigate={this.props.navigation.navigate} />
                   <Dialog.Container visible={this.state.visible}>
                     <Dialog.Title>{`Add a new ${this.state.name}!`}</Dialog.Title>
                     <Dialog.Description>
@@ -114,27 +124,7 @@ constructor(props){
                 </View>
             )
       }
-
-  // return (
-  //   <View style={styles.container}>
-  //     <Text style={styles.headlineText}>Activities List</Text>
-  //     <View style={{justifyContent: 'center'}}>
-  //       <Button title="Daily Routine" 
-  //       buttonStyle={styles.buttonStyle} 
-  //       titleStyle={{ fontSize: 25}} 
-  //       containerStyle={styles.buttonContainer} 
-  //       // onPress={() => props.navigation.navigate('')}
-  //       />
-  //       <Button title="Games" 
-  //       buttonStyle={styles.buttonStyle} 
-  //       titleStyle={{ fontSize: 25}} 
-  //       containerStyle={styles.buttonContainer}
-  //       />
-  //       </View>
-
-
-  //   </View>
-  // );
+      
     render(){
       const actions = [
     {
@@ -170,6 +160,7 @@ constructor(props){
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -193,3 +184,10 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline'
   }
 });
+
+const mapStateToProps = (state) => {
+  const { activityList } = state.activities;
+  return { activityList };
+};
+
+export default connect(mapStateToProps, {activityCreate, activitiesFetch})(ActivitiesList);

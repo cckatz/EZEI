@@ -3,7 +3,7 @@ import SkillsPage from '../pages/SkillsPage.js';
 import SkillDetail from '../pages/SkillDetail.js';
 import ActivitiesList from '../pages/ActivitiesList.js';
 import ActivityDetail from '../pages/ActivityDetail.js';
-
+import EIResources from '../pages/EIResources.js';
 
 import { createStackNavigator } from 'react-navigation';
 
@@ -19,6 +19,9 @@ const AppNavigator = createStackNavigator({
   },
   ActivityDetail: {
   	screen: ActivityDetail
+  },
+  Resources: {
+    screen: EIResources
   }
 
 });

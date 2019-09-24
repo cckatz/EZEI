@@ -89,8 +89,8 @@
 		}],
 		"games": [],
 		"resources": {
-			"books": ["", "", ""],
-			"websites": ["", "", ""]
+			"books": [{"title": "How Children Develop", "URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwiR5vCErurkAhVFp1kKHYODCskQFjAAegQIABAB&url=https%3A%2F%2Fwww.amazon.com%2FHow-Children-Develop-Robert-Siegler%2Fdp%2F1319014232&usg=AOvVaw39tV-afp0hPlr2HObwPdnv"},{"title": "Round Like Ball", "URL":"https://www.amazon.com/Round-Like-Ball-Campbell-Ernst/dp/1934706019"}, {"title": "Not a Box", "URL":"https://www.harpercollins.com/9780061123221/not-a-box"}],
+			"websites": [{"title":"Cognitive Dev Intro", "URL":"http://helpmegrowmn.org/HMG/HelpfulRes/Articles/WhatCognitiveDev/index.html"}, {"title":"Milestones","URL":"http://helpmegrowmn.org/HMG/DevelopMilestone/CognitiveMilestones/index.html"}, {"title":"Child Cognitive Skills", "URL":"http://www.ebsei.com/child-development/cognitive-skills"}]
 		}
 	},
 	{
@@ -167,8 +167,8 @@
 		],
 		"games": [],
 		"resources": {
-			"books": ["", "", ""],
-			"websites": ["", "", ""]
+			"books": [{"title": "Promoting S/E Wellness", "URL":"http://www.nccp.org/publications/pdf/text_885.pdf"}],
+			"websites": [{"title": "EBSEI S/E Skills","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwi7zI-2rurkAhVRpFkKHeMrA2oQFjABegQIABAB&url=http%3A%2F%2Fwww.ebsei.com%2Fchild-development%2Fsocial-emotional-skills&usg=AOvVaw30QKgxm5OWW7XPfDRg4AlN"}, {"title": "NY.gov","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=2ahUKEwi7zI-2rurkAhVRpFkKHeMrA2oQFjADegQIARAC&url=https%3A%2F%2Fwww.health.ny.gov%2Fpublications%2F4226.pdf&usg=AOvVaw1LgCeEAqCfwS-1BCqFCSNU"}]
 		}
 	},
 	{
@@ -235,8 +235,8 @@
 		],
 		"games": [],
 		"resources": {
-			"books": ["", "", ""],
-			"websites": ["", "", ""]
+			"books": [{"title": "EI Speech/Lang","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=2ahUKEwi1lPHCr-rkAhWmuFkKHZuuD-IQFjABegQIARAB&url=https%3A%2F%2Fwww.amazon.com%2FHeres-Early-Intervention-Speech-Language%2Fdp%2F1597564400&usg=AOvVaw0JxxZ7ThDGHZvCWuK2kvl3"}, {"title": "Great Books on Speech/Lang Dev","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=2ahUKEwi1lPHCr-rkAhWmuFkKHZuuD-IQFjADegQIBRAB&url=https%3A%2F%2Fteachmetotalk.com%2F2015%2F06%2F09%2Fgreat-books-for-toddlers-with-speech-language-delays%2F&usg=AOvVaw0GsCRwawx7obzL6cNbIKZP"}, {"title": "Speech Therapy Materials","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&ved=2ahUKEwi1lPHCr-rkAhWmuFkKHZuuD-IQFjAEegQIBBAB&url=https%3A%2F%2Fbilinguistics.com%2Fearly-intervention-speech-therapy-materials%2F&usg=AOvVaw2rrFdQn1CKyl5qUqYk6wh8"}],
+			"websites": [{"title": "Stages of Lang Delays","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=18&ved=2ahUKEwidqeX3rurkAhVHwVkKHYDnByAQFjARegQIAxAB&url=https%3A%2F%2Fwww.healthychildren.org%2FEnglish%2Fages-stages%2Ftoddler%2FPages%2FLanguage-Delay.aspx&usg=AOvVaw1TXjWKbETOuMayWOk_XBCY"}, {"title": "Speech Therapy (Parents)","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=22&ved=2ahUKEwidqeX3rurkAhVHwVkKHYDnByAQFjAVegQIBRAB&url=https%3A%2F%2Fkidshealth.org%2Fen%2Fparents%2Fspeech-therapy.html&usg=AOvVaw1EU8Ll1KJyNsCWq7-BxLS2"}, {"title": "MDEDGE","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=12&ved=2ahUKEwiUlKO0r-rkAhVIrVkKHXnICyQ4ChAWMAF6BAgFEAE&url=https%3A%2F%2Fwww.mdedge.com%2Ffamilymedicine%2Farticle%2F97583%2Fpediatrics%2Fspeech-language-hearing-delays-time-early-intervention&usg=AOvVaw1G1f-Kcu3PuOo9I5rZlJNy"}]
 		}
 	},
 	{
@@ -319,8 +319,8 @@
 		],
 		"games": [],
 		"resources": {
-			"books": ["", "", ""],
-			"websites": ["", "", ""]
+			"books": [{"title": "F/G Motor Skills","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwi75J-JsOrkAhWstlkKHUIRCNkQFjAAegQIABAB&url=https%3A%2F%2Fwww.amazon.com%2FActivities-Gross-Skills-Development-Childhood%2Fdp%2F0743936906&usg=AOvVaw3VCjXvTvEmV9oW6S80Y6x0"}, {"title": "Perceptual Motor Activities","URL":"https://www.google.com/aclk?sa=L&ai=DChcSEwjp4aeJsOrkAhUVYoYKHZEJAl4YABAJGgJ2dQ&ae=1&sig=AOD64_3Z8K1Hw-8fbcXho50f0V5aCQkpZQ&ctype=5&q=&ved=0ahUKEwi75J-JsOrkAhWstlkKHUIRCNkQ9aACCEU&adurl=https://www.amazon.com/Perceptual-motor-Activities-Children-Evidence-based-Cognitive/dp/1450401546/ref%3Dasc_df_1450401546/%3Ftag%3Dhyprod-20%26linkCode%3Ddf0%26hvadid%3D353874173411%26hvpos%3D1o3%26hvnetw%3Dg%26hvrand%3D2545018134377083056%26hvpone%3D%26hvptwo%3D%26hvqmt%3D%26hvdev%3Dc%26hvdvcmdl%3D%26hvlocint%3D%26hvlocphy%3D9067609%26hvtargid%3Dpla-364287304227%26psc%3D1%26tag%3D%26ref%3D%26adgrpid%3D71634025176%26hvpone%3D%26hvptwo%3D%26hvadid%3D353874173411%26hvpos%3D1o3%26hvnetw%3Dg%26hvrand%3D2545018134377083056%26hvqmt%3D%26hvdev%3Dc%26hvdvcmdl%3D%26hvlocint%3D%26hvlocphy%3D9067609%26hvtargid%3Dpla-364287304227"}, {"title": "EI Activity Book","URL":"https://www.google.com/aclk?sa=l&ai=DChcSEwjp4aeJsOrkAhUVYoYKHZEJAl4YABAIGgJ2dQ&ae=1&sig=AOD64_2CInM3a1maptMfnR6wewiZm0APkw&ctype=5&q=&ved=0ahUKEwi75J-JsOrkAhWstlkKHUIRCNkQ9aACCFQ&adurl=https://zlibshop.com/product/an-activity-based-approach-to-early-intervention-fourth-edition-ebook-pdf-version/"}],
+			"websites": [{"title": "Gross Motor Skills","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwivs4insOrkAhUCw1kKHXSuC0IQFjAAegQIAxAB&url=http%3A%2F%2Febsei.com%2Fchild-development%2Fgross-motor-skills&usg=AOvVaw1itgT7Nv_P97ybkJVhPOwz"}, {"title": "Pathways","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=11&ved=2ahUKEwivs4insOrkAhUCw1kKHXSuC0IQFjAKegQIABAB&url=https%3A%2F%2Fpathways.org%2Ftopics-of-development%2Fmotor-skills%2F&usg=AOvVaw1b8zfcukN6wUf15YRSd7Yi"}, {"title": "Early F/G Skills","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=12&ved=2ahUKEwivs4insOrkAhUCw1kKHXSuC0IQFjALegQIAhAB&url=https%3A%2F%2Fwww.gracepointwellness.org%2F462-child-development-parenting-early-3-7%2Farticle%2F12755-early-childhood-physical-development-gross-and-fine-motor-development&usg=AOvVaw3mYDq4f5YULPr8lbw6qiIm"}]
 		}
 	},
 	{
@@ -362,8 +362,8 @@
 		],
 		"games": [],
 		"resources": {
-			"books": ["", "", ""],
-			"websites": ["", "", ""]
+			"books": [{"title": "Young Exceptional Children","URL":"http://michigandec.org/Uploads/Pages/4/Popp_Young_Exceptional_Childre.pdf"}, {"title": "EI Guidebook for Parents","URL":"https://books.google.com/books?hl=en&lr=&id=v9tKl5RANq4C&oi=fnd&pg=PR5&ots=cgGwZ_4uWf&sig=5rPVFAuUHyXf2DB1Ax6Rrf7zKmI#v=onepage&q&f=false"}],
+			"websites": [{"title": "Key Exec Func Concepts","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=2ahUKEwixnbHPsOrkAhXGjFkKHcWLBEgQFjADegQIBRAB&url=https%3A%2F%2Fdevelopingchild.harvard.edu%2Fscience%2Fkey-concepts%2Fexecutive-function%2F&usg=AOvVaw0BDmL29bPZhiIRgRK4Tyq5"}, {"title": "Executive Func Disabilities","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=15&ved=2ahUKEwixnbHPsOrkAhXGjFkKHcWLBEgQFjAOegQIAxAB&url=https%3A%2F%2Fwww.understood.org%2Fen%2Flearning-attention-issues%2Fchild-learning-disabilities%2Fexecutive-functioning-issues%2Funderstanding-executive-functioning-issues&usg=AOvVaw3ZRoCpTSTimwiPyqHjvb6D"}, {"title": "Early Child Exec Func.","URL":"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=17&ved=2ahUKEwixnbHPsOrkAhXGjFkKHcWLBEgQFjAQegQIChAB&url=https%3A%2F%2Fwww.rti.org%2Finsights%2Fexecutive-function-early-childhood&usg=AOvVaw1zXU_Jvef-Yalc2b2PixLQ"}]
 		}
 	},
 ]

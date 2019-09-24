@@ -7,6 +7,7 @@ import {
     StyleSheet,
     TouchableOpacity,
     Dimensions,
+    Linking
 } from 'react-native';
 
 function numberWithCommas(x) {
@@ -21,11 +22,21 @@ function renderDescriptionLabel(props){
     );
 }
 
+onItemPressed = (props) => {
+    if(props.link){
+         return Linking.openURL(props.URL)
+    }   
+    else{
+        const navigate = props.navigate;
+        return navigate('ActivityDetail', {title:props.title, data: props.data, skillId: props.collection})
+    }
+}
+
 export default (props) => {
     const navigate = props.navigate;
     return (
         <View style={styles.container}>
-            <TouchableOpacity onPress={() => navigate('ActivityDetail', {title:props.title, data: props.data})}>
+            <TouchableOpacity onPress={() => onItemPressed(props) }>
             <Image source={props.source} style={[styles.album, props.circle ? {borderRadius: (Dimensions.get('window').width * 4.2/10)/2} : {}]} />
             <Text style={styles.text}>{props.title}</Text>
             {/* {renderDescriptionLabel(props)} */}

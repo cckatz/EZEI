@@ -17,8 +17,9 @@ export default class Collection extends Component {
         console.log("rendering items")
         const {circle} = this.props;
         return this.props.items.map((a, i ) => {
+            // console.log(a)
             return (
-                <CollectionItem circle={circle} source={ezeiDefault} title={a.title} data={a} collection={this.props.id} route={a.route} navigate={navigate} id={i} key={i}/>
+                <CollectionItem circle={circle} source={ezeiDefault} title={a.title} data={a} URL={a.URL} collection={this.props.id} route={a.route} navigate={navigate} link={this.props.link} id={i} key={i}/>
             )
         })
 
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         paddingTop: 10,
-        paddingBottom: 10
+        paddingBottom: 10,
     },
 
     title: {
