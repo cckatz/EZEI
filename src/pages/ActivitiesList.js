@@ -28,11 +28,14 @@ constructor(props){
   // console.log(activities)
   this.state = {id: skill.id, itemTitle: itemTitle, visible: false, activities:dailyActivities, games: [], activityName: '', gameName: '' }
 
-  // this._retrieveData()
   console.log('in constuctor')
   props.activitiesFetch()
 }
 
+// componentDidMount(){
+//     // this._retrieveData()
+
+// }
 
 
  static navigationOptions = ({navigation}) => {

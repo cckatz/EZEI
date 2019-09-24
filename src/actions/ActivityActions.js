@@ -37,25 +37,25 @@ export const addGoal = (skillId, activityId, goal) => async dispatch =>{
 };
 
 export const fetchGoals = (id) => async dispatch => {
-	    console.log('in get activities')
-	    let goalsRef = await db.collection(`activities/${id}/byAge`).get()
-	  .then(snapshot => {
-	    if (snapshot.empty) {
-	      console.log('No matching documents.');
-	    }  
-	    var goals = []
-	    snapshot.forEach(doc => {
-	        goals.push({id: doc.id, data: doc.data()})
-	      console.log(doc.id, '=>', doc.data());
+	  //   console.log('in get activities')
+	  //   let goalsRef = await db.collection(`activities/${id}/byAge`).get()
+	  // .then(snapshot => {
+	  //   if (snapshot.empty) {
+	  //     console.log('No matching documents.');
+	  //   }  
+	  //   var goals = []
+	  //   snapshot.forEach(doc => {
+	  //       goals.push({id: doc.id, data: doc.data()})
+	  //     console.log(doc.id, '=>', doc.data());
 
-	    });
-	    dispatch({type: FETCH_GOALS_SUCCESS, payload: goals})
+	  //   });
+	  //   dispatch({type: FETCH_GOALS_SUCCESS, payload: goals})
 
-	  })
-	  .catch(err => {
-	    console.log('Error getting documents', err);
-	    dispatch({type: FETCH_GOALS_ERROR, payload: err})
-	  });
+	  // })
+	  // .catch(err => {
+	  //   console.log('Error getting documents', err);
+	  //   dispatch({type: FETCH_GOALS_ERROR, payload: err})
+	  // });
 
 }
 
@@ -88,37 +88,37 @@ export const activitiesUpdate = () => async dispatch => {
 
 export const activitiesFetch = () => async dispatch =>{
 	    // console.log('in get activities')
-	    let eventsRef = db.collection('activities').get()
-	  .then(snapshot => {
-	    if (snapshot.empty) {
-	      console.log('No matching documents.');
+// 	    let eventsRef = db.collection('activities').get()
+// 	  .then(snapshot => {
+// 	    if (snapshot.empty) {
+// 	      console.log('No matching documents.');
 	      
-	    }  
-	    var activities = []
-	    var list = {}
-	    snapshot.forEach(doc => {
-	    	list[doc.id] = []
-	    	 activityListRef = db.collection(`activities/${doc.id}/activities`).get()
-	        	.then(dataSnapshot=> {
-	        		if(dataSnapshot.empty){
-	        			console.log('no activities')
-	        		}
-	        		// console.log('there are activities')
-	        		dataSnapshot.forEach((activityDoc) => {
-	        				list[doc.id].push({id: activityDoc.id, ...activityDoc.data()})
-	        		})
-	        		})
+// 	    }  
+// 	    var activities = []
+// 	    var list = {}
+// 	    snapshot.forEach(doc => {
+// 	    	list[doc.id] = []
+// 	    	 activityListRef = db.collection(`activities/${doc.id}/activities`).get()
+// 	        	.then(dataSnapshot=> {
+// 	        		if(dataSnapshot.empty){
+// 	        			console.log('no activities')
+// 	        		}
+// 	        		// console.log('there are activities')
+// 	        		dataSnapshot.forEach((activityDoc) => {
+// 	        				list[doc.id].push({id: activityDoc.id, ...activityDoc.data()})
+// 	        		})
+// 	        		})
 
-	        		activities.push({...doc.data(), list: list[doc.id] })
-	      // console.log(doc.id, '=>', doc.data());
-	        	})
+// 	        		activities.push({...doc.data(), list: list[doc.id] })
+// 	      // console.log(doc.id, '=>', doc.data());
+// 	        	})
 
-	    		dispatch({type: ACTIVITIES_FETCH_SUCCESS, payload: activities})
-})
-	  .catch(err => {
-	    console.log('Error getting documents', err);
-	    dispatch({type: ACTIVITIES_FETCH_ERROR, payload: err})
-	  });
+// 	    		dispatch({type: ACTIVITIES_FETCH_SUCCESS, payload: activities})
+// })
+// 	  .catch(err => {
+// 	    console.log('Error getting documents', err);
+// 	    dispatch({type: ACTIVITIES_FETCH_ERROR, payload: err})
+// 	  });
 
 };
 // export const activitiesFetch = () => async dispatch =>{
