@@ -29,7 +29,7 @@ constructor(props){
   this.state = {id: skill.id, itemTitle: itemTitle, visible: false, activities:dailyActivities, games: [], activityName: '', gameName: '' }
 
   console.log('in constuctor')
-  props.activitiesFetch()
+  // props.activitiesFetch()
 }
 
 // componentDidMount(){
@@ -50,7 +50,7 @@ constructor(props){
       componentDidUpdate = (prevProps, prevState) => {
         console.log('ACTIVITIES LIST component did update')
         // console.log(this.state, this.props)
-        console.log(this.props.activityList[0].list.length)
+        // console.log(this.props.activityList[0].list.length)
       }
 
       _storeData = async () => {
